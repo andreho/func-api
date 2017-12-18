@@ -1,5 +1,5 @@
 group 'net.andreho'
-version projectVersion
+version '0.1'
 
 buildscript {
   repositories {
@@ -38,6 +38,8 @@ dependencies {
   testCompile "org.junit.vintage:junit-vintage-engine:$junitVintageVersion"
   testCompile "org.assertj:assertj-core:$assertjVersion"  
 }
+
+defaultTasks 'clean', 'build', 'test', 'install'
 
 task sourceJar(type: Jar) {
   from sourceSets.main.allJava
